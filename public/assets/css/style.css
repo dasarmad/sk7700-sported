@@ -1,0 +1,281 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.n-001-header {
+    background-color: #26262c;
+  }
+  
+  .nav-link {
+    color: #8ddb6f;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .nav-link:hover {
+    color: #83c469;
+  }
+  
+  .n-001-logo {
+    font-family: 'Abril Fatface', cursive;
+    
+  }
+  
+  main {
+    background-color: #19181b;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 1px;
+    padding-bottom: 5px;
+  }
+  
+  .stories-header {
+    
+  }
+  
+  
+  .btn-success {
+    color: #000;
+    background-color: #8ddb6f;
+    border-color: #8ddb6f;
+  }
+  
+  .btn-success:hover {
+    color: #000;
+    background-color: #83c469;
+    border-color: #83c469;
+  }
+  
+  .btn-outline-success{
+    color:#8ddb6f;
+    border-color:#8ddb6f
+  }
+  .btn-outline-success:hover{
+    color:#000;
+    background-color:#8ddb6f;
+    border-color:#8ddb6f}
+
+
+  .card {
+    border: none;
+  }
+  
+  .card-title {
+    color: #8ddb6f;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .card-text {
+    color: #2c3e50;
+    font-size: 14px;
+  }
+  
+  .card-creator {
+    color: #83c469;
+    font-weight: 700;
+  }
+  
+  footer {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .c-000 {
+    font-family: 'Abril Fatface', cursive;
+    
+  }
+  
+  @media only screen and (max-width: 520px) {
+    #logo {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 20px;
+    }
+  }
+  
+  .footer__copyright-claim {
+    text-align: center;
+  }
+  
+  .footer-col {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  
+  .footer-col-title {
+    color: #00cb7f;
+    margin-bottom: 0;
+  }
+  
+  
+  
+  
+  
+  /* New CSS */
+  
+  body {
+    color: white;
+    overflow-x: hidden;
+    /*background: linear-gradient(180deg, rgb(0, 203, 127) 250px, #FFF 250px);*/
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #19181b;
+    min-height: 100vh; 
+  }
+  
+  .brand-wrapper {
+    margin-bottom: 19px; }
+    .brand-wrapper .logo {
+      height: 37px; }
+  
+  .login-card {
+    border-radius: 15px;
+    overflow: hidden; 
+  }
+  .login-card-img {
+    border-radius: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*-o-object-fit: cover;
+    object-fit: cover;*/ 
+  }
+  
+  #description{
+    width: 100%;
+    line-height: 1.2em;
+    
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  #left_div{
+    
+  }
+
+  #example {
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    word-wrap:break-word; 
+  }
+
+  /*
+  */
+
+section #services {
+  
+  transform: translatez(0);
+}
+section #services h2 {
+  margin: 80px 0px 40px;
+  color: #fff;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+section #services li {
+  display: inline-grid;
+  margin: 2px;
+  list-style: none;
+  
+}
+
+section #services li a {
+  color: #9beb81;
+}
+
+.text-green{
+  color: #9beb81;
+}
+
+section #services li span {
+  width: 50px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  text-align: center;
+}
+.credits a {
+  display: block;
+  text-align: center;
+  color: #74d4b3;
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 50px;
+  background: white;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.table_heading{
+  background: #19181b;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+table, th, td {
+  border: 1px solid #26262c;
+  background: #26262c;
+  color: white;
+}
+
+.table-content{
+  background: white; 
+  color: #26262c;
+  padding: 5px;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+}
+
+.dataTables_info, label, select, input[type="search"]{
+  color: white;
+} 
+.paginate_button{
+  color: #9beb81;
+}
+
+.enabled {
+  border-radius: 150px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 45px;
+    background-color: #9beb81;
+    transition: all 0.5s ease;
+}
+
+.disabled{
+  border-radius: 150px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 45px;
+    background-color: #26262d;
+    transition: all 0.5s ease;
+}
+
+.text-green, text-success {
+  color: #8ddb6f;
+}
+
+.mid-image {
+  background: url('../images/NJSC logo.png');
+  background-size: 8%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}

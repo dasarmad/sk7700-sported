@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Sported</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/951ae9444d.js" crossorigin="anonymous"></script>
+   
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Nunito+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
+
+    
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDr8PTdV-WOKfz9zEAcUgpC_4va1UG53Yo",
+        authDomain: "sportedapp-6f6d2.firebaseapp.com",
+        projectId: "sportedapp-6f6d2",
+        storageBucket: "sportedapp-6f6d2.appspot.com",
+        messagingSenderId: "351780975997",
+        appId: "1:351780975997:web:e1ce4fe0d085662d840814",
+        measurementId: "G-DDE87W2BSE"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+    <header class="n-001-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-4">
+            <div class="n-001-content">
+              <div class="n-001-logo">
+                <picture class="c-000" id="logo">
+                  <img src="assets/images/Sported Logo White Sarah.png" style="width: 32%;"/>
+                </picture>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <ul class="nav justify-content-end">
+              <li class="nav-item" id="username">
+                <a class="nav-link btn" href="index.html"><i class="far fa-user-circle"></i> todo_username</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn text-danger" href="javascript:void(0)" onclick="doLogout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="exampleModalLongBody">
+            
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <main >
+  
+     
+      <section class="main-content m-5">
+        <div class="container-fluid mid-image" >
+          <div class="row">
+            <div class="col-md-8">
+              <section id="sports-section">
+                <ul id="services" style="padding-left: 0; cursor: pointer;">
+                  <li style="cursor: pointer;" onclick="readMore('Football')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/football2--v1.png">
+                      </a>
+                    </div>
+                    <span>Football</span>
+                  </li>
+                  <li style="cursor: pointer;" onclick="readMore('Cricket')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/cricket.png">
+                      </a>
+                    </div>
+                    <span>Cricket</span>
+                  </li>
+                  
+                  <li style="cursor: pointer;" onclick="readMore('Badminton')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                        <img src="https://img.icons8.com/ios-glyphs/30/ffffff/badminton.png"/>
+                      </a>
+                    </div>
+                    <span>Badminton</span>
+                  </li>
+                  <li style="cursor: pointer;" onclick="readMore('Volleyball')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                        <img src="https://img.icons8.com/ios/30/ffffff/volleyball--v1.png"/>
+                      </a>
+                    </div>
+                    <span>Volleyball</span>
+                  </li>
+                  <li style="cursor: pointer;" onclick="readMore('Table Tennis')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                        <img src="https://img.icons8.com/ios/30/ffffff/ping-pong.png"/>
+                      </a>
+                    </div>
+                    <span>Table Tennis</span>
+                  </li>
+                  <li style="cursor: pointer;" onclick="readMore('all-bookings')">
+                    <div class="disabled" style="padding: 0%;">
+                      <a>
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/show-all-views.png"/>
+                      </a>
+                    </div>
+                    <span>View all</span>
+                  </li>
+                </ul>
+                
+              </section>
+
+            </div>
+            <div class="col-md-4">
+              <div align="right" class="w-100 h-100">
+                <input placeholder="Pick booking date" class="h-50 p-1 rounded" style="border: 4px solid #9beb81; background: #9beb81;" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" onchange="inputDateFilter(this);">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <p id="f_sports" class="text-white-50"></p>
+            </div>
+          </div>
+        </div>  
+        <div class="container-fluid">
+          <div class="row p-3 rounded" style="background-color: #26262c;">
+            <div class="col-md-12 text-center" style="display: none;">
+              <div class="spinner-grow text-success" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table id="example"  style="width:100%">
+                  <thead >
+                    <tr >
+                      <th><div class="table_heading"><small><i class="far fa-clock text-green"></i></i> Timestamp</small></div></th>
+                      <th><div class="table_heading"><small><i class="fas fa-user text-green"></i></i> Name</small></div></th>
+                      <th><div class="table_heading"><small><i class="fas fa-ticket-alt text-green"></i> Member</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-running text-green"></i> Sport</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-clock text-green"></i> Slot Booked</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-clock text-green"></i> Begin Time</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-clock text-green"></i> End Time</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-clock text-green"></i> Duration</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-receipt text-green"></i> Receipt No</small></div></th>
+                      <th ><div class="table_heading"><small><i class="fas fa-money-bill text-green"></i> Price Paid</small></div></th>
+                      <th ><div class="table_heading text-center"><small><!--<i class="far fa-edit text-green"></i>--> Action</small></div></th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody id="innertbody">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
+
+    <!-- Datatables -->
+    <link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.bootstrap.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.js"></script>
+
+
+
+    <script type="text/javascript" src="assets/js/firestore.js" ></script>
+  </body>
+</html>
